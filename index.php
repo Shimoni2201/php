@@ -1,7 +1,7 @@
 <?php
 echo "hello world <br>"; 
 $s="pizza";
-echo " i like " . $s . "<br>" ;
+echo " i like " . $s . "<br>";
 
 $x = 5; // global scope
 
