@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <title>form</title>
+    <link type="text/css" rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Personal Details</h1>
+    <table class="form">
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div class="name"> 
+                        <label for="firstName">Frist Name</label>
+                        <input type="text" name="firstName" id="firstName" required autofocus><br>
+                    
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" required autofocus><br>
+                    </div>
+                    <div class="name"> 
+                        <label for="dob">Date of Birth </label>
+                        <input type="date" name="dob" id="dob">
+                        <!-- <button type="submit" onclick = "ageCalculator()"> Calculate age </button> -->
+                        <h3 style="color:32A80F" id="result" align="center"></h3>   
+
+                    </div>
+                    <div class="name1"> 
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input required placeholder="enter 10 digit mobile number" autofocus pattern="[0-9]{10}" maxlength="10" size="10"  type="text" name="mobileNumber" id="mobileNumber">
+                       
+                        <label for="pan">Pan card no.</label>
+                            <input required type="text" name="pan" id="pan"  autofocus >
+                          <!-- pattern="/([A-Z]){5}([0-9]){4}([A-Z]){1}$/" -->
+                            <label for="pincode">Pincode</label>
+                            <input required type="text" name="pincode" id="pincode" autofocus maxlength="6" size="6">
+                        
+                    </div>
+                    <div class="name"> 
+                        <label for="married" style="font-size: large;">Are you Married?</label>
+                        <input type="radio" name="married" id="yes"  >Yes 
+                        <input type="radio" name="married" id="no"  > No
+                    
+                        <label style="text-align: right; font-size: large;" for="doa" >Date of Anniversary?</label>
+                        <input type="date" name="doa" id="doa">
+                    
+                    </div>
+                    <div> 
+                        <br>
+                        <label style="margin-top: auto;" for="address">Address</label>
+                        <textarea required id="address" name="address" autofocus rows="2" cols="160" ></textarea>
+                    </div>
+                    <div class="name"> 
+                        <label for="city">City</label>
+                        <input required type="text" name="city" autofocus id="city">
+                     
+                        <label for="state">State</label>
+                        <input required type="text" name="state" autofocus id="state">
+                    </div>
+                    <div class="name"> 
+                        <label for="country">Country</label>
+                        <input required type="text" name="country" autofocus id="country">
+                   
+                       
+                    </div>
+                    
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit" onclick = "ageCalculator()" >
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </td>
+            <tr>
+                <table class="list" id="storeList">
+                    <thead>
+                        <tr> 
+                            <th>Name</th>
+                            <th>Mobile Number</th>
+                            <th>Date of Birth</th>
+                            <th>Married</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </tr>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+   
+</body>
+</html>
